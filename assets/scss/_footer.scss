@@ -1,0 +1,67 @@
+.site-footer {
+  background-color: $text-colour;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 30px 0;
+  font-size: 14px;
+
+  a {
+    color: rgba(255, 255, 255, 0.9);
+
+    &:hover {
+      color:#fff;
+    }
+  }
+
+  .footer-primary {
+
+    .footer-logo {
+      opacity: 0.9;
+
+      @media (min-width: $sm-w) {
+        float: left;
+        width: 8%;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      img {
+        width: 130px;
+        max-width: 100%;
+      }
+    }
+
+    .footer-links {
+      margin: 10px;
+      padding: 0 5px;
+
+      @media (min-width: $sm-w) {
+        float: right;
+        width: 92%;
+        text-align: right;
+        margin: 0;
+      }
+
+      li {
+        display: block;
+
+        @media (min-width: $sm-w) {
+          display: inline-block;
+          padding: 7px;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-secondary {
+    font-size: 13px;
+    border-top: solid 1px rgba(255, 255, 255, 0.4);
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+}
