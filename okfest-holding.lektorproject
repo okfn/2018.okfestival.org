@@ -1,2 +1,7 @@
 [project]
 name = okfest-holding
+
+[servers.ghpages]
+enabled = yes
+default = yes
+target = ghpages://smth/okfestival-holding
