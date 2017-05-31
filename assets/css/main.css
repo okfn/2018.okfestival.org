@@ -68,7 +68,7 @@ body {
       display: table-cell;
       vertical-align: middle; }
     .banner header h1 {
-      margin: 0; }
+      margin: 0 10px; }
       @media (min-width: 768px) {
         .banner header h1 {
           font-size: 5vw; } }
@@ -78,7 +78,8 @@ body {
         color: #FF513B;
         padding: 0.2em 0.5em; }
     .banner header p {
-      display: block; }
+      display: block;
+      margin: 1em 10px 0 10px; }
       @media (min-width: 768px) {
         .banner header p {
           font-size: 1.75vw; } }
@@ -106,7 +107,7 @@ body {
             opacity: 1; }
   .banner .logos {
     position: absolute;
-    left: 0;
+    left: -10px;
     bottom: 1vh; }
     .banner .logos a {
       opacity: 0.8;

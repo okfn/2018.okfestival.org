@@ -34,7 +34,7 @@ body {
     }
 
     h1 {
-      margin: 0;
+      margin: 0 10px;
 
       @media (min-width: $sm-w) {
         font-size: 5vw;
@@ -50,6 +50,7 @@ body {
 
     p {
       display: block;
+      margin: 1em 10px 0 10px;
 
       @media (min-width: $sm-w) {
         font-size: 1.75vw;
@@ -95,7 +96,7 @@ body {
 
   .logos {
     position: absolute;
-    left: 0;
+    left: -10px;
     bottom: 1vh;
 
     a {
