@@ -1,7 +1,13 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  {{ this.section_one }}
-  {{ this.section_two }}
-  {{ this.section_three }}
+  <section id="{{ this.section_one_id }}">
+    {{ this.section_one }}
+  </section>
+  <section id="{{ this.section_two_id }}">
+    {{ this.section_two }}
+  </section>
+  <section id="{{ this.section_three_id }}">
+    {{ this.section_three }}
+  </section>
 {% endblock %}

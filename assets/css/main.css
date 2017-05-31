@@ -1,53 +1,6 @@
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   font-weight: 800; }
 
-.site-footer {
-  background-color: #333333;
-  color: rgba(255, 255, 255, 0.6);
-  padding: 30px 0;
-  font-size: 14px; }
-  .site-footer a {
-    color: rgba(255, 255, 255, 0.9); }
-    .site-footer a:hover {
-      color: #fff; }
-  .site-footer .footer-primary .footer-logo {
-    opacity: 0.9; }
-    @media (min-width: 768px) {
-      .site-footer .footer-primary .footer-logo {
-        float: left;
-        width: 8%; } }
-    .site-footer .footer-primary .footer-logo:hover {
-      opacity: 1; }
-    .site-footer .footer-primary .footer-logo img {
-      width: 130px;
-      max-width: 100%; }
-  .site-footer .footer-primary .footer-links {
-    margin: 10px;
-    padding: 0 5px; }
-    @media (min-width: 768px) {
-      .site-footer .footer-primary .footer-links {
-        float: right;
-        width: 92%;
-        text-align: right;
-        margin: 0; } }
-    .site-footer .footer-primary .footer-links li {
-      display: block; }
-      @media (min-width: 768px) {
-        .site-footer .footer-primary .footer-links li {
-          display: inline-block;
-          padding: 7px; }
-          .site-footer .footer-primary .footer-links li:last-child {
-            padding-right: 0; } }
-  .site-footer .footer-secondary {
-    font-size: 13px;
-    border-top: solid 1px rgba(255, 255, 255, 0.4);
-    margin-top: 15px;
-    padding-top: 15px; }
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: #333333; }
-
 .banner {
   font-weight: 600;
   background-color: #2586FF;
@@ -57,7 +10,7 @@ body {
   background-image: url(../img/banner.jpg);
   background-position: center;
   background-size: cover;
-  overflow-x: hidden; }
+  overflow: hidden; }
   .banner > div {
     max-width: 1170px;
     margin-left: auto;
@@ -135,5 +88,79 @@ body {
         opacity: 1; }
     .banner .logos img {
       height: 8vh; }
+
+.site-footer {
+  background-color: #333333;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 30px 0;
+  font-size: 14px; }
+  .site-footer a {
+    color: rgba(255, 255, 255, 0.9); }
+    .site-footer a:hover {
+      color: #fff; }
+  .site-footer .footer-primary .footer-logo {
+    opacity: 0.9; }
+    @media (min-width: 768px) {
+      .site-footer .footer-primary .footer-logo {
+        float: left;
+        width: 8%; } }
+    .site-footer .footer-primary .footer-logo:hover {
+      opacity: 1; }
+    .site-footer .footer-primary .footer-logo img {
+      width: 130px;
+      max-width: 100%; }
+  .site-footer .footer-primary .footer-links {
+    margin: 10px;
+    padding: 0 5px; }
+    @media (min-width: 768px) {
+      .site-footer .footer-primary .footer-links {
+        float: right;
+        width: 92%;
+        text-align: right;
+        margin: 0; } }
+    .site-footer .footer-primary .footer-links li {
+      display: block; }
+      @media (min-width: 768px) {
+        .site-footer .footer-primary .footer-links li {
+          display: inline-block;
+          padding: 7px; }
+          .site-footer .footer-primary .footer-links li:last-child {
+            padding-right: 0; } }
+  .site-footer .footer-secondary {
+    font-size: 13px;
+    border-top: solid 1px rgba(255, 255, 255, 0.4);
+    margin-top: 15px;
+    padding-top: 15px; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+  overflow-x: hidden; }
+
+.page {
+  max-width: 770px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3vmin 5vmin; }
+  .page p {
+    line-height: 1.6; }
+  .page section {
+    position: relative;
+    padding-top: 2vmin;
+    padding-bottom: 2vmin; }
+    .page section:nth-child(even) {
+      background-color: #e2efff; }
+      .page section:nth-child(even):before, .page section:nth-child(even):after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        background-color: #e2efff; }
+      .page section:nth-child(even):before {
+        right: 100%; }
+      .page section:nth-child(even):after {
+        left: 100%; }
 
 /*# sourceMappingURL=main.css.map */
