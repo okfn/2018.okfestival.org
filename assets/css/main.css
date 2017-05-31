@@ -98,12 +98,22 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
     color: rgba(255, 255, 255, 0.9); }
     .site-footer a:hover {
       color: #fff; }
+  .site-footer .container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px; }
+  @media (min-width: 768px) {
+    .site-footer .footer-primary {
+      display: table;
+      width: 100%; } }
   .site-footer .footer-primary .footer-logo {
     opacity: 0.9; }
     @media (min-width: 768px) {
       .site-footer .footer-primary .footer-logo {
-        float: left;
-        width: 8%; } }
+        display: table-cell;
+        width: 15%; } }
     .site-footer .footer-primary .footer-logo:hover {
       opacity: 1; }
     .site-footer .footer-primary .footer-logo img {
@@ -114,8 +124,8 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
     padding: 0 5px; }
     @media (min-width: 768px) {
       .site-footer .footer-primary .footer-links {
-        float: right;
-        width: 92%;
+        display: table-cell;
+        width: 85%;
         text-align: right;
         margin: 0; } }
     .site-footer .footer-primary .footer-links li {
@@ -144,6 +154,8 @@ body {
   padding: 3vmin 5vmin; }
   .page p {
     line-height: 1.6; }
+  .page a {
+    color: #2586FF; }
   .page section {
     position: relative;
     padding-top: 2vmin;

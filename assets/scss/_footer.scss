@@ -12,14 +12,26 @@
     }
   }
 
+  .container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .footer-primary {
+    @media (min-width: $sm-w) {
+      display: table;
+      width: 100%;
+    }
 
     .footer-logo {
       opacity: 0.9;
 
       @media (min-width: $sm-w) {
-        float: left;
-        width: 8%;
+        display: table-cell;
+        width: 15%;
       }
 
       &:hover {
@@ -37,8 +49,8 @@
       padding: 0 5px;
 
       @media (min-width: $sm-w) {
-        float: right;
-        width: 92%;
+        display: table-cell;
+        width: 85%;
         text-align: right;
         margin: 0;
       }

@@ -20,6 +20,10 @@ body {
     line-height: 1.6;
   }
 
+  a {
+    color: $primary-colour;
+  }
+
   section {
     position: relative;
     padding-top: 2vmin;
