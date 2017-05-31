@@ -4,4 +4,8 @@ name = okfest-holding
 [servers.ghpages]
 enabled = yes
 default = yes
+target = ghpages://okfn/okfestival.org?cname=okfestival.org
+
+[servers.smth]
+enabled = yes
 target = ghpages://smth/okfestival-holding
