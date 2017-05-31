@@ -1,0 +1,6 @@
+[project]
+name = OKFestival 2018
+
+[servers.ghpages]
+default = yes
+target = ghpages+https://okfn/2018.okfestival.org
