@@ -4,7 +4,10 @@ cache:
   directories:
     - $HOME/.cache/pip
     - $HOME/.cache/lektor/builds
-install: "pip install Lektor"
+# This is needed to get https://github.com/lektor/lektor/pull/240, which is
+# currently unreleased. When that's released, we can move back to installing
+# straight from pip
+install: "pip install git+git://github.com/lektor/lektor.git@bb85c95d8dceb326dacca0a577ab81d999dd5297"
 script: "lektor build"
 deploy:
   provider: script
