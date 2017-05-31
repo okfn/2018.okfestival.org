@@ -129,5 +129,20 @@
     img {
       height: 8vh;
     }
+
+    // (horrible) IE workaround for incorrect svg widths
+    a {
+      position: relative;
+      canvas {
+        display: block;
+        height: 8vh;
+        visibility: hidden;
+      }
+      img {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+    }
   }
 }
