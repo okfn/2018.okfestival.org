@@ -4,7 +4,7 @@ name = okfest-holding
 [servers.ghpages]
 enabled = yes
 default = yes
-target = ghpages://okfn/okfestival.org?cname=okfestival.org
+target = ghpages://okfn/2018.okfestival.org?cname=2018.okfestival.org
 
 [servers.smth]
 enabled = yes
