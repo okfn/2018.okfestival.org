@@ -3,68 +3,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/css/style.css'|url }}">
-<title>{{ this.title }} {{ this.start_date.strftime('%Y') }}</title>
-<body>
-  <div class="banner">
-    <div>
-      <header>
-        <div>
-          <h1><span><strong>{{ this.title }}</strong> {{ this.start_date.strftime('%Y') }}</span></h1>
-          <p>
-            <span>{{ this.start_date.strftime('%-d') }}-{{ this.end_date.strftime('%-d %B') }}, {{ this.place }}</span>
-          </p>
-        </div>
-      </header>
-      <nav>
-        <ul>
-          {% for label, path in bag('main-nav').iteritems() %}
-          <li{% if this.is_child_of(path) %} class="active"{% endif %}>
-            <a href="{{ path }}">{{ label }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
-      <div class="logos">
-        <a{% if this.org_one_url %} href="{{ this.org_one_url }}"{% endif %}>
-          <img src="{{ this.org_one_logo|url }}" alt="{{ this.org_one_name }}" />
-          {# (horrible) IE workaround for incorrect svg widths #}
-          {% if this.org_one_width and this.org_one_height %}
-          <canvas width="{{ this.org_one_width }}" height="{{ this.org_one_height }}"></canvas>
-          {% endif %}
-        </a>
-        {% if this.org_two_name %}
-        <a{% if this.org_two_url %} href="{{ this.org_two_url }}"{% endif %}>
-          <img src="{{ this.org_two_logo|url }}" alt="{{ this.org_two_name }}" />
-          {# (horrible) IE workaround for incorrect svg widths #}
-          {% if this.org_two_width and this.org_two_height %}
-          <canvas width="{{ this.org_two_width }}" height="{{ this.org_two_height }}"></canvas>
-          {% endif %}
-        </a>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-  <div class="page">
-    {% block body %}{% endblock %}
-  </div>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-primary">
-        <a class="footer-logo" href="https://okfn.org/">
-          <img src="https://a.okfn.org/img/oki/landscape-white-468x122.png" alt="Open Knowledge International">
-        </a>
-        <ul class="footer-links">
-          <li>
-            <a href="https://2012.okfestival.org/" rel="external">2012</a>
-          </li>
-          <li>
-            <a href="https://2014.okfestival.org/" rel="external">2014</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-secondary">
-        <p></p>
-      </div>
-    </div>
-  </footer>
+<title>{% block title %}{{ this.title }}{% endblock %}{% if this.start_date %} {{ this.start_date.strftime('%Y') }}{% endif %}</title>
+<body class="{{ this._model }}">
+
+  {% block body %}{% endblock %}
+
+  <script src="{{ '/js/smooth-scroll.min.js'|url }}"></script>
+  <script>
+    smoothScroll.init();
+  </script>
 </body>

@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block title %}OKFestival {{ this.title }}{% endblock %}
+{% block body %}
+<header class="cover">
+  <div class="image"{% if this.cover %} style="background-image: url({{ this.cover }});"{% endif %}>
+  </div>
+  <div class="text">
+    <div>
+      {% include 'includes/logo.svg' %}
+      {% set title_words = this.title.split(' ') %}
+      <h1>
+        {% for w in title_words %}<span><span>{{ w }}</span></span><span><span>&nbsp;</span></span>{% endfor %}
+      </h1>
+      <span>{{ this.start_date.strftime('%-d') }}-{{ this.end_date.strftime('%-d %B %Y') }}. {{ this.place }}</span>
+    </div>
+  </div>
+  <a class="next" href="#content" data-scroll>{% include 'includes/down.svg' %}</a>
+</header>
+
+<section id="content">
+  <div class="image" style="background-image: url({{ this.img1 }});">
+  </div>
+  <div class="text">
+    <div>
+      <span>
+        <h2>{{ this.heading1 }}</h2>
+        {{ this.content1 }}
+        <h2>{{ this.heading2 }}</h2>
+        {{ this.content2 }}
+      </span>
+    </div>
+    <div>
+      <span>
+        <h2>{{ this.heading3 }}</h2>
+        {{ this.content3 }}
+      </span>
+
+      <span class="image" style="background-image: url({{ this.img2 }});">
+      </span>
+    </div>
+  </div>
+
+  <div class="image" style="background-image: url({{ this.img3 }});">
+  </div>
+  <h2>{{ this.heading4 }}</h2>
+  <div class="text">
+    <div>
+      {{ this.content4 }}
+      <span class="callout">
+        <h3>{{ this.heading5 }}</h3>
+        {{ this.content5 }}
+      </span>
+    </div>
+    <div>
+      <h3>{{ this.heading6 }}</h3>
+      {{ this.content6 }}
+    </div>
+  </div>
+
+  <div class="image" style="background-image: url({{ this.img4 }});">
+  </div>
+  <div class="text">
+    <div>
+      <span>
+        <h2>{{ this.heading7 }}</h2>
+        {{ this.content7 }}
+      </span>
+    </div>
+    <div>
+      <span>
+        <h2>{{ this.heading8 }}</h2>
+        {{ this.content8 }}
+      </span>
+    </div>
+  </div>
+</section>
+{% endblock %}

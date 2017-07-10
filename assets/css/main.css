@@ -1,103 +1,141 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333333; }
+
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   font-weight: 800; }
 
-.banner {
-  font-weight: 600;
-  background-color: #2586FF;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url(../img/banner.jpg);
-  background-position: center;
-  background-size: cover;
-  overflow: hidden; }
-  .banner > div {
-    max-width: 1170px;
+p,
+ul,
+ol {
+  margin-top: 0; }
+
+.page {
+  overflow-x: hidden; }
+  .page .banner {
+    font-weight: 600;
+    background-color: #2586FF;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden; }
+    .page .banner > div {
+      max-width: 1170px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      background-color: rgba(37, 134, 255, 0.8); }
+      @media (min-width: 1170px) {
+        .page .banner > div:before, .page .banner > div:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100vw;
+          background-color: rgba(37, 134, 255, 0.8); }
+        .page .banner > div:before {
+          right: 100%; }
+        .page .banner > div:after {
+          left: 100%; } }
+    .page .banner header {
+      display: table;
+      width: 100%;
+      height: 100vh;
+      text-align: center; }
+      .page .banner header > div {
+        display: table-cell;
+        vertical-align: middle; }
+      .page .banner header h1 {
+        margin: 0 10px; }
+        @media (min-width: 768px) {
+          .page .banner header h1 {
+            font-size: 5vw; } }
+        .page .banner header h1 span {
+          display: inline-block;
+          background-color: #fff;
+          color: #FF513B;
+          padding: 0.2em 0.5em; }
+      .page .banner header p {
+        display: block;
+        margin: 1em 10px 0 10px; }
+        @media (min-width: 768px) {
+          .page .banner header p {
+            font-size: 1.75vw; } }
+        .page .banner header p span {
+          display: inline-block;
+          background-color: #FF513B;
+          color: #fff;
+          padding: 0.2em 0.5em; }
+    .page .banner nav {
+      position: absolute;
+      top: 1vh;
+      right: 0; }
+      .page .banner nav ul {
+        margin: 10px;
+        padding: 0; }
+        .page .banner nav ul li {
+          display: inline-block;
+          padding: 10px; }
+          .page .banner nav ul li a {
+            color: inherit;
+            opacity: 0.8;
+            text-decoration: none;
+            border-bottom: solid 4px #fff; }
+            .page .banner nav ul li a:link:hover {
+              opacity: 1; }
+    .page .banner .logos {
+      position: absolute;
+      left: -10px;
+      bottom: 1vh; }
+      .page .banner .logos a {
+        opacity: 0.8;
+        display: inline-block;
+        padding: 20px; }
+        .page .banner .logos a:link:hover {
+          opacity: 1; }
+      .page .banner .logos img {
+        height: 8vh; }
+      .page .banner .logos a {
+        position: relative; }
+        .page .banner .logos a canvas {
+          display: block;
+          height: 8vh;
+          visibility: hidden; }
+        .page .banner .logos a img {
+          position: absolute;
+          top: 20px;
+          left: 20px; }
+  .page .content {
+    max-width: 770px;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
-    background-color: rgba(37, 134, 255, 0.8); }
-    @media (min-width: 1170px) {
-      .banner > div:before, .banner > div:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100vw;
-        background-color: rgba(37, 134, 255, 0.8); }
-      .banner > div:before {
-        right: 100%; }
-      .banner > div:after {
-        left: 100%; } }
-  .banner header {
-    display: table;
-    width: 100%;
-    height: 100vh;
-    text-align: center; }
-    .banner header > div {
-      display: table-cell;
-      vertical-align: middle; }
-    .banner header h1 {
-      margin: 0 10px; }
-      @media (min-width: 768px) {
-        .banner header h1 {
-          font-size: 5vw; } }
-      .banner header h1 span {
-        display: inline-block;
-        background-color: #fff;
-        color: #FF513B;
-        padding: 0.2em 0.5em; }
-    .banner header p {
-      display: block;
-      margin: 1em 10px 0 10px; }
-      @media (min-width: 768px) {
-        .banner header p {
-          font-size: 1.75vw; } }
-      .banner header p span {
-        display: inline-block;
-        background-color: #FF513B;
-        color: #fff;
-        padding: 0.2em 0.5em; }
-  .banner nav {
-    position: absolute;
-    top: 1vh;
-    right: 0; }
-    .banner nav ul {
-      margin: 10px;
-      padding: 0; }
-      .banner nav ul li {
-        display: inline-block;
-        padding: 10px; }
-        .banner nav ul li a {
-          color: inherit;
-          opacity: 0.8;
-          text-decoration: none;
-          border-bottom: solid 4px #fff; }
-          .banner nav ul li a:link:hover {
-            opacity: 1; }
-  .banner .logos {
-    position: absolute;
-    left: -10px;
-    bottom: 1vh; }
-    .banner .logos a {
-      opacity: 0.8;
-      display: inline-block;
-      padding: 20px; }
-      .banner .logos a:link:hover {
-        opacity: 1; }
-    .banner .logos img {
-      height: 8vh; }
-    .banner .logos a {
-      position: relative; }
-      .banner .logos a canvas {
-        display: block;
-        height: 8vh;
-        visibility: hidden; }
-      .banner .logos a img {
-        position: absolute;
-        top: 20px;
-        left: 20px; }
+    padding: 3vmin 5vmin; }
+    .page .content p {
+      line-height: 1.6; }
+    .page .content a {
+      color: #2586FF; }
+    .page .content section {
+      position: relative;
+      padding-top: 2vmin;
+      padding-bottom: 2vmin; }
+      .page .content section:nth-child(even) {
+        background-color: #e2efff; }
+        .page .content section:nth-child(even):before, .page .content section:nth-child(even):after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100vw;
+          background-color: #e2efff; }
+        .page .content section:nth-child(even):before {
+          right: 100%; }
+        .page .content section:nth-child(even):after {
+          left: 100%; }
 
 .site-footer {
   background-color: #333333;
@@ -152,37 +190,155 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
     margin-top: 15px;
     padding-top: 15px; }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: #333333;
-  overflow-x: hidden; }
-
-.page {
-  max-width: 770px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3vmin 5vmin; }
-  .page p {
-    line-height: 1.6; }
-  .page a {
-    color: #2586FF; }
-  .page section {
-    position: relative;
-    padding-top: 2vmin;
-    padding-bottom: 2vmin; }
-    .page section:nth-child(even) {
-      background-color: #e2efff; }
-      .page section:nth-child(even):before, .page section:nth-child(even):after {
-        content: '';
+.brochure h1, .brochure h2, .brochure h3, .brochure h4, .brochure h5, .brochure h6 {
+  font-weight: 600; }
+.brochure h2, .brochure h3 {
+  margin-top: 1em;
+  margin-bottom: 0.3em; }
+.brochure .callout {
+  background-color: #ffe15b;
+  padding: 5vmin;
+  margin: 5vh -5vmin;
+  display: block; }
+  .brochure .callout h3 {
+    margin-bottom: 0.2em; }
+  .brochure .callout :first-child {
+    margin-top: 0; }
+  .brochure .callout :last-child {
+    margin-bottom: 0; }
+.brochure .image {
+  position: relative;
+  color: #fff;
+  background-size: cover;
+  background-position: center; }
+  .brochure .image div {
+    background-size: cover;
+    background-position: center; }
+  .brochure .image p {
+    position: absolute;
+    right: 1.2vmin;
+    bottom: 1.2vmin;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    opacity: 0.5;
+    transform: rotate(-90deg);
+    width: 10px;
+    height: 10px;
+    white-space: nowrap; }
+  .brochure .image a {
+    color: inherit; }
+.brochure .text {
+  padding: 0 10vmin 7vmin 10vmin; }
+.brochure .cover {
+  height: 100vh;
+  background-color: #2586FF;
+  color: #fff; }
+  .brochure .cover .image {
+    filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+    /* Firefox 10+, Firefox on Android */
+    filter: gray;
+    /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+    /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1; }
+    @media (min-width: 768px) {
+      .brochure .cover .image {
+        position: relative;
+        z-index: auto; } }
+  .brochure .cover .text {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-size: 3.5vmin; }
+    @media (min-width: 768px) {
+      .brochure .cover .text {
+        font-size: 2.5vmin; } }
+    .brochure .cover .text svg {
+      fill: currentColor;
+      width: 75vw;
+      height: 15.375vw; }
+      @media (min-width: 768px) {
+        .brochure .cover .text svg {
+          width: 53.757vmin;
+          height: 11vmin; } }
+    .brochure .cover .text h1 {
+      font-size: 5vmin;
+      padding-left: 0.4em; }
+      @media (min-width: 768px) {
+        .brochure .cover .text h1 {
+          font-size: 4vmin; } }
+      .brochure .cover .text h1 > span {
+        position: relative;
+        display: inline-block; }
+        .brochure .cover .text h1 > span:before {
+          content: '';
+          position: absolute;
+          top: -0.2em;
+          right: -0.4em;
+          bottom: -0.2em;
+          left: -0.4em;
+          background-color: #FF513B; }
+        .brochure .cover .text h1 > span:last-child {
+          display: none; }
+        .brochure .cover .text h1 > span span {
+          position: relative;
+          z-index: 1; }
+  .brochure .cover .image,
+  .brochure .cover .text {
+    box-sizing: border-box; }
+    @media (min-width: 768px) {
+      .brochure .cover .image,
+      .brochure .cover .text {
+        height: 50vh; } }
+  .brochure .cover .next {
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    width: 6vmin;
+    height: 6vmin;
+    margin-left: -3vmin;
+    color: inherit; }
+    .brochure .cover .next svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor; }
+.brochure section {
+  line-height: 1.6;
+  padding-top: 7vmin; }
+  @media (min-width: 768px) {
+    .brochure section {
+      padding-top: 0; } }
+  .brochure section .image {
+    display: none; }
+    @media (min-width: 768px) {
+      .brochure section .image {
         display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100vw;
-        background-color: #e2efff; }
-      .page section:nth-child(even):before {
-        right: 100%; }
-      .page section:nth-child(even):after {
-        left: 100%; }
+        height: 50vh;
+        margin-bottom: 7vmin; } }
+  @media (min-width: 992px) {
+    .brochure section .text {
+      display: flex;
+      margin-left: -10vmin;
+      font-size: 1.2vw; }
+      .brochure section .text div {
+        flex-grow: 1;
+        flex-basis: 0;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10vmin; }
+        .brochure section .text div .image {
+          flex-grow: 1;
+          margin-top: 5vmin; }
+        .brochure section .text div :first-child {
+          margin-top: 0; } }
+  .brochure section > h2 {
+    padding-left: 10vmin;
+    padding-right: 10vmin; }
+    .brochure section > h2 + .text {
+      padding-top: 0; }
 
 /*# sourceMappingURL=main.css.map */
