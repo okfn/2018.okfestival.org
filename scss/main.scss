@@ -1,53 +1,7 @@
 @import "colours";
 @import "breakpoints";
+@import "mixins";
 @import "type";
-@import "banner";
+@import "holding";
 @import "footer";
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: $text-colour;
-  overflow-x: hidden;
-}
-
-.page {
-  max-width: 770px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3vmin 5vmin;
-
-  p {
-    line-height: 1.6;
-  }
-
-  a {
-    color: $primary-colour;
-  }
-
-  section {
-    position: relative;
-    padding-top: 2vmin;
-    padding-bottom: 2vmin;
-
-    &:nth-child(even) {
-      background-color: lighten($primary-colour,37%);
-
-      &:before,
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100vw;
-        background-color: lighten($primary-colour,37%);
-      }
-      &:before {
-        right: 100%;
-      }
-      &:after {
-        left: 100%;
-      }
-    }
-  }
-}
+@import "brochure";
