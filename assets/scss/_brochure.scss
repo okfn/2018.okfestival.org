@@ -3,7 +3,7 @@
     font-weight: 600;
   }
 
-  h2, h3 {
+  h2, h3, h4 {
     margin-top: 1em;
     margin-bottom: 0.3em;
   }
@@ -64,7 +64,7 @@
   .cover {
     height: 100vh;
     background-color: $primary-colour;
-    color: #fff;
+    @include light-text;
 
     .image {
       @include greyscale;
@@ -211,6 +211,213 @@
       & + .text {
         padding-top: 0;
       }
+    }
+
+    .sponsorship {
+      padding: 0 10vmin 7vmin 10vmin;
+
+      @media (min-width: $md-w) {
+        font-size: 1.2vw;
+      }
+
+      .comparison {
+        width: 100%;
+        border-collapse: collapse;
+        line-height: 1.1;
+        margin-top: 5vmin;
+
+        th,
+        td {
+          padding-top: 1.5vh;
+          padding-bottom: 1.5vh;
+        }
+
+        th {
+          text-align: left;
+          font-weight: 400;
+          border-top: solid 1px rgba($text-colour, 0.1);
+
+          &.level1,
+          &.level2,
+          &.level3 {
+            width: 1%;
+            padding: 1.7vh 1.7vw;
+          }
+
+          &.level1 {
+            background-color: rgba($blue, 1);
+            color: #fff;
+          }
+          &.level2 {
+            background-color: rgba($yellow, 1);
+          }
+          &.level3 {
+            background-color: rgba($text-colour, 0.5);
+            color: #fff;
+          }
+        }
+
+        thead {
+          th {
+            font-weight: 600;
+            border: none;
+          }
+        }
+
+        td {
+          svg {
+            width: 1em;
+            height: 1em;
+            fill: currentColor;
+          }
+
+          &.level1,
+          &.level2,
+          &.level3 {
+            padding-left: 1.7vw;
+            padding-right: 1.7vw;
+
+            &:empty {
+              opacity: 0.6;
+            }
+          }
+
+          &.level1 {
+            background-color: rgba($blue, 0.15);
+            border-top: solid 1px rgba($blue, 0.15);
+          }
+          &.level2 {
+            background-color: rgba($yellow, 0.3);
+            border-top: solid 1px rgba($yellow, 0.3);
+          }
+          &.level3 {
+            background-color: rgba($text-colour, 0.1);
+            border-top: solid 1px rgba($text-colour, 0.1);
+          }
+        }
+
+        tbody tr {
+          &:hover {
+            th:not(:empty) {
+              background-color: rgba($text-colour, 0.05);
+            }
+            td {
+              &:not(:empty) {
+                &.level1 {
+                  background-color: rgba($blue, 1);
+                  border-top: solid 1px rgba($blue, 1);
+                  color: #fff;
+                }
+                &.level2 {
+                  background-color: rgba($yellow, 1);
+                  border-top: solid 1px rgba($yellow, 1);
+                }
+                &.level3 {
+                  background-color: rgba($text-colour, 0.5);
+                  border-top: solid 1px rgba($text-colour, 0);
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+
+        .prices {
+          td {
+            font-weight: 600;
+
+            &.level1 {
+              background-color: rgba($blue, 0.1);
+            }
+            &.level2 {
+              background-color: rgba($yellow, 0.25);
+            }
+            &.level3 {
+              background-color: rgba($text-colour, 0.05);
+            }
+          }
+        }
+
+        @media screen and (max-width: $sm-w) {
+          tr {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+          }
+
+          td,
+          th,
+          th.level1,
+          th.level2,
+          th.level3,
+          td.level1,
+          td.level2,
+          td.level3 {
+            display: block;
+            width: 33%;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+          }
+
+          th:first-child,
+          td:first-child {
+            width: 100%;
+          }
+
+          thead th:first-child {
+            display: none;
+          }
+        }
+      }
+
+      .comparison-footer {
+        display: block;
+        padding-bottom: 5vmin;
+      }
+
+      .sponsor-items {
+        div {
+          border-bottom: solid 1px rgba($text-colour, 0.1);
+          padding-top: 2vmin;
+          padding-bottom: 2vmin;
+        }
+        @media (min-width: $sm-w) {
+          column-count: 2;
+          column-gap: 10vmin;
+
+          div {
+            break-inside: avoid;
+            page-break-inside: avoid;
+
+            h4 {
+              margin-top: 0;
+            }
+          }
+        }
+        @media (min-width: $md-w) {
+          column-count: 3;
+        }
+      }
+
+      .sponsorship-footer {
+        padding-top: 5vmin;
+        padding-bottom: 5vmin;
+      }
+
+      .partner-intro {
+        padding-bottom: 2vmin;
+      }
+    }
+  }
+
+  .contact {
+    background-color: $primary-colour;
+    @include light-text;
+    padding: 5vmin 10vmin;
+
+    a {
+      color: inherit;
     }
   }
 }

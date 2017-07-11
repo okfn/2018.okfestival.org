@@ -192,7 +192,7 @@ ol {
 
 .brochure h1, .brochure h2, .brochure h3, .brochure h4, .brochure h5, .brochure h6 {
   font-weight: 600; }
-.brochure h2, .brochure h3 {
+.brochure h2, .brochure h3, .brochure h4 {
   margin-top: 1em;
   margin-bottom: 0.3em; }
 .brochure .callout {
@@ -233,7 +233,9 @@ ol {
 .brochure .cover {
   height: 100vh;
   background-color: #2586FF;
-  color: #fff; }
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
   .brochure .cover .image {
     filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
     /* Firefox 10+, Firefox on Android */
@@ -340,5 +342,131 @@ ol {
     padding-right: 10vmin; }
     .brochure section > h2 + .text {
       padding-top: 0; }
+  .brochure section .sponsorship {
+    padding: 0 10vmin 7vmin 10vmin; }
+    @media (min-width: 992px) {
+      .brochure section .sponsorship {
+        font-size: 1.2vw; } }
+    .brochure section .sponsorship .comparison {
+      width: 100%;
+      border-collapse: collapse;
+      line-height: 1.1;
+      margin-top: 5vmin; }
+      .brochure section .sponsorship .comparison th,
+      .brochure section .sponsorship .comparison td {
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh; }
+      .brochure section .sponsorship .comparison th {
+        text-align: left;
+        font-weight: 400;
+        border-top: solid 1px rgba(51, 51, 51, 0.1); }
+        .brochure section .sponsorship .comparison th.level1, .brochure section .sponsorship .comparison th.level2, .brochure section .sponsorship .comparison th.level3 {
+          width: 1%;
+          padding: 1.7vh 1.7vw; }
+        .brochure section .sponsorship .comparison th.level1 {
+          background-color: #2586ff;
+          color: #fff; }
+        .brochure section .sponsorship .comparison th.level2 {
+          background-color: #ffe15b; }
+        .brochure section .sponsorship .comparison th.level3 {
+          background-color: rgba(51, 51, 51, 0.5);
+          color: #fff; }
+      .brochure section .sponsorship .comparison thead th {
+        font-weight: 600;
+        border: none; }
+      .brochure section .sponsorship .comparison td svg {
+        width: 1em;
+        height: 1em;
+        fill: currentColor; }
+      .brochure section .sponsorship .comparison td.level1, .brochure section .sponsorship .comparison td.level2, .brochure section .sponsorship .comparison td.level3 {
+        padding-left: 1.7vw;
+        padding-right: 1.7vw; }
+        .brochure section .sponsorship .comparison td.level1:empty, .brochure section .sponsorship .comparison td.level2:empty, .brochure section .sponsorship .comparison td.level3:empty {
+          opacity: 0.6; }
+      .brochure section .sponsorship .comparison td.level1 {
+        background-color: rgba(37, 134, 255, 0.15);
+        border-top: solid 1px rgba(37, 134, 255, 0.15); }
+      .brochure section .sponsorship .comparison td.level2 {
+        background-color: rgba(255, 225, 91, 0.3);
+        border-top: solid 1px rgba(255, 225, 91, 0.3); }
+      .brochure section .sponsorship .comparison td.level3 {
+        background-color: rgba(51, 51, 51, 0.1);
+        border-top: solid 1px rgba(51, 51, 51, 0.1); }
+      .brochure section .sponsorship .comparison tbody tr:hover th:not(:empty) {
+        background-color: rgba(51, 51, 51, 0.05); }
+      .brochure section .sponsorship .comparison tbody tr:hover td:not(:empty).level1 {
+        background-color: #2586ff;
+        border-top: solid 1px #2586ff;
+        color: #fff; }
+      .brochure section .sponsorship .comparison tbody tr:hover td:not(:empty).level2 {
+        background-color: #ffe15b;
+        border-top: solid 1px #ffe15b; }
+      .brochure section .sponsorship .comparison tbody tr:hover td:not(:empty).level3 {
+        background-color: rgba(51, 51, 51, 0.5);
+        border-top: solid 1px rgba(51, 51, 51, 0);
+        color: #fff; }
+      .brochure section .sponsorship .comparison .prices td {
+        font-weight: 600; }
+        .brochure section .sponsorship .comparison .prices td.level1 {
+          background-color: rgba(37, 134, 255, 0.1); }
+        .brochure section .sponsorship .comparison .prices td.level2 {
+          background-color: rgba(255, 225, 91, 0.25); }
+        .brochure section .sponsorship .comparison .prices td.level3 {
+          background-color: rgba(51, 51, 51, 0.05); }
+      @media screen and (max-width: 768px) {
+        .brochure section .sponsorship .comparison tr {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-around; }
+        .brochure section .sponsorship .comparison td,
+        .brochure section .sponsorship .comparison th,
+        .brochure section .sponsorship .comparison th.level1,
+        .brochure section .sponsorship .comparison th.level2,
+        .brochure section .sponsorship .comparison th.level3,
+        .brochure section .sponsorship .comparison td.level1,
+        .brochure section .sponsorship .comparison td.level2,
+        .brochure section .sponsorship .comparison td.level3 {
+          display: block;
+          width: 33%;
+          padding-left: 0;
+          padding-right: 0;
+          text-align: center; }
+        .brochure section .sponsorship .comparison th:first-child,
+        .brochure section .sponsorship .comparison td:first-child {
+          width: 100%; }
+        .brochure section .sponsorship .comparison thead th:first-child {
+          display: none; } }
+    .brochure section .sponsorship .comparison-footer {
+      display: block;
+      padding-bottom: 5vmin; }
+    .brochure section .sponsorship .sponsor-items div {
+      border-bottom: solid 1px rgba(51, 51, 51, 0.1);
+      padding-top: 2vmin;
+      padding-bottom: 2vmin; }
+    @media (min-width: 768px) {
+      .brochure section .sponsorship .sponsor-items {
+        column-count: 2;
+        column-gap: 10vmin; }
+        .brochure section .sponsorship .sponsor-items div {
+          break-inside: avoid;
+          page-break-inside: avoid; }
+          .brochure section .sponsorship .sponsor-items div h4 {
+            margin-top: 0; } }
+    @media (min-width: 992px) {
+      .brochure section .sponsorship .sponsor-items {
+        column-count: 3; } }
+    .brochure section .sponsorship .sponsorship-footer {
+      padding-top: 5vmin;
+      padding-bottom: 5vmin; }
+    .brochure section .sponsorship .partner-intro {
+      padding-bottom: 2vmin; }
+.brochure .contact {
+  background-color: #2586FF;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 5vmin 10vmin; }
+  .brochure .contact a {
+    color: inherit; }
 
 /*# sourceMappingURL=main.css.map */
