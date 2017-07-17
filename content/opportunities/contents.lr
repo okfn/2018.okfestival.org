@@ -154,7 +154,7 @@ sponsor_level1_perk9: yes
 ---
 sponsor_level2_cost: 20000
 ---
-sponsor_level2_limit: 
+sponsor_level2_limit:
 ---
 sponsor_level2_perk1: yes
 ---
@@ -172,7 +172,7 @@ sponsor_level2_perk8: yes
 ---
 sponsor_level3_cost: 10000
 ---
-sponsor_level3_limit: 
+sponsor_level3_limit:
 ---
 sponsor_level3_perk12: 5
 ---
@@ -186,7 +186,7 @@ sponsor_heading: Company Sponsorship
 ---
 sponsor_intro:
 
-Raising your company’s profile through varying levels of sponsorships from headline sponsorship of the event to specific items. 
+Raising your company’s profile through varying levels of sponsorships from headline sponsorship of the event to specific items.
 ---
 sponsor_item1_title: Technical sponsorship
 ---
@@ -245,7 +245,7 @@ sponsor_items_heading: Specific item sponsorship
 ---
 sponsor_footer:
 
-As well as all of the above packages, we can also offer tailored sponsorship options which can be collaboratively designed. Please feel welcome to [contact us](mailto:sponsors@okfestival.org) and we can discuss these ideas further. 
+As well as all of the above packages, we can also offer tailored sponsorship options which can be collaboratively designed. Please feel welcome to [contact us](mailto:sponsors@okfestival.org) and we can discuss these ideas further.
 ---
 partner_heading: Partnership
 ---
@@ -267,7 +267,7 @@ partner_item2_cost: 30000
 ---
 partner_item2_description:
 
-Grant support of technical aspects of event programme (hackathons/research/technical workshops) to develop skills sharing 
+Grant support of technical aspects of event programme (hackathons/research/technical workshops) to develop skills sharing
 
 A session to run within the programme
 15 minute demo slot at Festival
@@ -288,7 +288,7 @@ partner_item4_cost: 5000
 ---
 partner_item4_description:
 
-Enabling volunteers to facilitate the Festival experience 
+Enabling volunteers to facilitate the Festival experience
 
 Acknowledgement on OKFestival website and associated social media
 
@@ -302,4 +302,22 @@ contact_details:
 
 [info@okfestival.org](mailto:info@okfestival.org)
 ---
-contact_heading: Contact details
+org_one_name: Open Knowledge International
+---
+org_one_logo: ../oki.svg
+---
+org_one_height: 243.64
+---
+org_one_url: https://okfn.org/
+---
+org_one_width: 935.45
+---
+org_two_height: 655.43
+---
+org_two_logo: ../gr.svg
+---
+org_two_name: Open Knowledge Greece
+---
+org_two_url: http://okfn.gr/
+---
+org_two_width: 1359.15
