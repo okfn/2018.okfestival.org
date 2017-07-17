@@ -102,9 +102,9 @@ sponsor_level3_title: Silver sponsor
 ---
 sponsor_perk1: Brand visibility on stage
 ---
-sponsor_perk10: Showcasing space throughout the festival*
+sponsor_perk10: Distribution of promotional material in delegate packs*
 ---
-sponsor_perk11: Private space for one session during festival*
+sponsor_perk11: Private space for one session during festival†
 ---
 sponsor_perk2: Conference Centre brand visibility
 ---
@@ -122,7 +122,7 @@ sponsor_perk8: Use of OKFestival official designation
 ---
 sponsor_perk9: Invitation to attend press events
 ---
-sponsor_perk12: Complimentary tickets
+sponsor_perk12: Physical presence throughout the festival
 ---
 sponsor_level1_cost: 30000
 ---
@@ -134,7 +134,7 @@ sponsor_level1_perk10: yes
 ---
 sponsor_level1_perk11: yes
 ---
-sponsor_level1_perk12: 15
+sponsor_level1_perk12: Showcasing space
 ---
 sponsor_level1_perk2: yes
 ---
@@ -158,7 +158,7 @@ sponsor_level2_limit:
 ---
 sponsor_level2_perk1: yes
 ---
-sponsor_level2_perk12: 10
+sponsor_level2_perk12: Banner
 ---
 sponsor_level2_perk2: yes
 ---
@@ -174,13 +174,17 @@ sponsor_level3_cost: 10000
 ---
 sponsor_level3_limit: 
 ---
-sponsor_level3_perk12: 5
+sponsor_level3_perk12: 
 ---
 sponsor_level3_perk3: yes
 ---
 sponsor_level3_perk6: yes
 ---
-sponsor_fineprint: *Additional expenses, such as layout, catering or equipment are not covered.
+sponsor_fineprint:
+
+*Material provided at own cost
+
+†Additional expenses, such as layout, catering or equipment are not covered.
 ---
 sponsor_heading: Company Sponsorship
 ---
@@ -317,3 +321,17 @@ org_two_name: Open Knowledge Greece
 org_two_url: http://okfn.gr/
 ---
 org_two_width: 1359.15
+---
+sponsor_level1_perk13: 15
+---
+sponsor_level2_perk13: 10
+---
+sponsor_level3_perk13: 5
+---
+sponsor_perk13: Complimentary tickets
+---
+sponsor_level2_perk10: yes
+---
+sponsor_level3_perk10: yes
+---
+sponsor_level3_perk4: yes
