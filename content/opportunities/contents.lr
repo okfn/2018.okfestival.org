@@ -102,9 +102,9 @@ sponsor_level3_title: Silver sponsor
 ---
 sponsor_perk1: Brand visibility on stage
 ---
-sponsor_perk10: Distribution of promotional material in delegate packs*
+sponsor_perk10: Distribution of promotional material in delegate packs<sup>*</sup>
 ---
-sponsor_perk11: Private space for one session during festival†
+sponsor_perk11: Private space for one session during festival<sup>†</sup>
 ---
 sponsor_perk2: Conference Centre brand visibility
 ---
@@ -134,7 +134,7 @@ sponsor_level1_perk10: yes
 ---
 sponsor_level1_perk11: yes
 ---
-sponsor_level1_perk12: Showcasing space
+sponsor_level1_perk12: Showcasing space<sup>†</sup>
 ---
 sponsor_level1_perk2: yes
 ---
