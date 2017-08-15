@@ -197,11 +197,20 @@ ol {
   margin-top: 1em;
   margin-bottom: 0.3em; }
 
+.brochure a {
+  color: #2586FF; }
+  @media print {
+    .brochure a {
+      color: inherit;
+      text-decoration: none; } }
+
 .brochure .callout {
   background-color: #ffe15b;
   padding: 5vmin;
   margin: 5vh -5vmin;
-  display: block; }
+  display: block;
+  break-inside: avoid;
+  page-break-inside: avoid; }
   .brochure .callout h3 {
     margin-bottom: 0.2em; }
   .brochure .callout :first-child {
@@ -213,7 +222,9 @@ ol {
   position: relative;
   color: #fff;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  break-inside: avoid;
+  page-break-inside: avoid; }
   .brochure .image div {
     background-size: cover;
     background-position: center; }
@@ -313,6 +324,9 @@ ol {
       width: 100%;
       height: 100%;
       fill: currentColor; }
+    @media print {
+      .brochure .cover .next {
+        display: none; } }
 
 .brochure section {
   line-height: 1.6;
@@ -320,9 +334,17 @@ ol {
   @media (min-width: 768px) {
     .brochure section {
       padding-top: 0; } }
+  @media print {
+    .brochure section {
+      padding-top: 0; } }
   .brochure section .image {
     display: none; }
     @media (min-width: 768px) {
+      .brochure section .image {
+        display: block;
+        height: 50vh;
+        margin-bottom: 7vmin; } }
+    @media print {
       .brochure section .image {
         display: block;
         height: 50vh;
@@ -343,6 +365,9 @@ ol {
           margin-top: 5vmin; }
         .brochure section .text div :first-child {
           margin-top: 0; } }
+  @media print {
+    .brochure section .text {
+      page-break-after: always; } }
   .brochure section > h2 {
     padding-left: 10vmin;
     padding-right: 10vmin; }
@@ -353,6 +378,9 @@ ol {
     @media (min-width: 992px) {
       .brochure section .sponsorship {
         font-size: 1.2vw; } }
+    @media print {
+      .brochure section .sponsorship {
+        page-break-after: always; } }
     .brochure section .sponsorship .comparison {
       width: 100%;
       border-collapse: collapse;
