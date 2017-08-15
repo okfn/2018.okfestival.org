@@ -33,14 +33,14 @@ module.exports = function(grunt) {
 				tasks: ['sass']
 			},
       cssmin: {
-				files: '**/*.css',
+				files: 'assets/css/main.css',
 				tasks: ['cssmin']
 			}
 		}
   });
 
   // Load the plugins
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 

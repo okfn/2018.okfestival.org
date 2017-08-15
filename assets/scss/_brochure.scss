@@ -444,13 +444,66 @@
     }
   }
 
-  .contact {
+  .footer {
     background-color: $primary-colour;
     @include light-text;
     padding: 5vmin 10vmin;
 
+    @media (min-width: $sm-w) {
+      display: flex;
+      align-items: center;
+    }
+
     a {
       color: inherit;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .logos {
+      margin-left: -20px;
+
+      a {
+        opacity: 0.8;
+        display: inline-block;
+        padding: 20px;
+
+        &:link {
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      img {
+        height: 8vh;
+      }
+
+      // (horrible) IE workaround for incorrect svg widths
+      a {
+        position: relative;
+        canvas {
+          display: block;
+          height: 8vh;
+          visibility: hidden;
+        }
+        img {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+        }
+      }
+    }
+
+    .contact {
+      @media (min-width: $sm-w) {
+        text-align: right;
+        flex-grow: 1;
+
+        :last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }

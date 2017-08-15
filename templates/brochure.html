@@ -182,6 +182,12 @@
           <td class="level2">{% if this.sponsor_level2_perk12 %}{{ this.sponsor_level2_perk12 }}{% endif %}</td>
           <td class="level3">{% if this.sponsor_level3_perk12 %}{{ this.sponsor_level3_perk12 }}{% endif %}</td>
         </tr>
+        <tr>
+          <th>{{ this.sponsor_perk13 }}</th>
+          <td class="level1">{% if this.sponsor_level1_perk13 %}{{ this.sponsor_level1_perk13 }}{% endif %}</td>
+          <td class="level2">{% if this.sponsor_level2_perk13 %}{{ this.sponsor_level2_perk13 }}{% endif %}</td>
+          <td class="level3">{% if this.sponsor_level3_perk13 %}{{ this.sponsor_level3_perk13 }}{% endif %}</td>
+        </tr>
         {% endif %}
         <tr class="prices">
           <th></th>
@@ -281,9 +287,28 @@
     </div>
   </div>
 </section>
-<footer class="contact">
-  <div>
-    <h2>{{ this.contact_heading }}</h2>
+<footer class="footer">
+  <div class="logos">
+    {% if this.org_one_name %}
+    <a{% if this.org_one_url %} href="{{ this.org_one_url }}"{% endif %}>
+      <img src="{{ this.org_one_logo|url }}" alt="{{ this.org_one_name }}" />
+      {# (horrible) IE workaround for incorrect svg widths #}
+      {% if this.org_one_width and this.org_one_height %}
+      <canvas width="{{ this.org_one_width }}" height="{{ this.org_one_height }}"></canvas>
+      {% endif %}
+    </a>
+    {% endif %}
+    {% if this.org_two_name %}
+    <a{% if this.org_two_url %} href="{{ this.org_two_url }}"{% endif %}>
+      <img src="{{ this.org_two_logo|url }}" alt="{{ this.org_two_name }}" />
+      {# (horrible) IE workaround for incorrect svg widths #}
+      {% if this.org_two_width and this.org_two_height %}
+      <canvas width="{{ this.org_two_width }}" height="{{ this.org_two_height }}"></canvas>
+      {% endif %}
+    </a>
+    {% endif %}
+  </div>
+  <div class="contact">
     {{ this.contact_details }}
   </div>
 </footer>

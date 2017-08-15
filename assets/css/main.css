@@ -192,15 +192,18 @@ ol {
 
 .brochure h1, .brochure h2, .brochure h3, .brochure h4, .brochure h5, .brochure h6 {
   font-weight: 600; }
+
 .brochure h2, .brochure h3, .brochure h4 {
   margin-top: 1em;
   margin-bottom: 0.3em; }
+
 .brochure a {
   color: #2586FF; }
   @media print {
     .brochure a {
       color: inherit;
       text-decoration: none; } }
+
 .brochure .callout {
   background-color: #ffe15b;
   padding: 5vmin;
@@ -214,6 +217,7 @@ ol {
     margin-top: 0; }
   .brochure .callout :last-child {
     margin-bottom: 0; }
+
 .brochure .image {
   position: relative;
   color: #fff;
@@ -238,8 +242,10 @@ ol {
     white-space: nowrap; }
   .brochure .image a {
     color: inherit; }
+
 .brochure .text {
   padding: 0 10vmin 7vmin 10vmin; }
+
 .brochure .cover {
   height: 100vh;
   background-color: #2586FF;
@@ -321,6 +327,7 @@ ol {
     @media print {
       .brochure .cover .next {
         display: none; } }
+
 .brochure section {
   line-height: 1.6;
   padding-top: 7vmin; }
@@ -487,13 +494,44 @@ ol {
       padding-bottom: 5vmin; }
     .brochure section .sponsorship .partner-intro {
       padding-bottom: 2vmin; }
-.brochure .contact {
+
+.brochure .footer {
   background-color: #2586FF;
   color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 5vmin 10vmin; }
-  .brochure .contact a {
-    color: inherit; }
-
-/*# sourceMappingURL=main.css.map */
+  @media (min-width: 768px) {
+    .brochure .footer {
+      display: flex;
+      align-items: center; } }
+  .brochure .footer a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600; }
+  .brochure .footer .logos {
+    margin-left: -20px; }
+    .brochure .footer .logos a {
+      opacity: 0.8;
+      display: inline-block;
+      padding: 20px; }
+      .brochure .footer .logos a:link:hover {
+        opacity: 1; }
+    .brochure .footer .logos img {
+      height: 8vh; }
+    .brochure .footer .logos a {
+      position: relative; }
+      .brochure .footer .logos a canvas {
+        display: block;
+        height: 8vh;
+        visibility: hidden; }
+      .brochure .footer .logos a img {
+        position: absolute;
+        top: 20px;
+        left: 20px; }
+  @media (min-width: 768px) {
+    .brochure .footer .contact {
+      text-align: right;
+      flex-grow: 1; }
+      .brochure .footer .contact :last-child {
+        margin-bottom: 0; } }
