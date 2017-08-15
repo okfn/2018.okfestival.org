@@ -210,7 +210,7 @@
         margin-left: -10vmin;
         font-size: 1.2vw;
 
-        div {
+        & > div {
           flex-grow: 1;
           flex-basis: 0;
           display: flex;
