@@ -8,11 +8,22 @@
     margin-bottom: 0.3em;
   }
 
+  a {
+    color: $primary-colour;
+
+    @media print {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
   .callout {
     background-color: $yellow;
     padding: 5vmin;
     margin: 5vh -5vmin;
     display: block;
+    break-inside: avoid;
+    page-break-inside: avoid;
 
     h3 {
       margin-bottom: 0.2em;
@@ -32,6 +43,8 @@
     color: #fff;
     background-size: cover;
     background-position: center;
+    break-inside: avoid;
+    page-break-inside: avoid;
 
     div {
       background-size: cover;
@@ -88,7 +101,6 @@
       @media (min-width: $sm-w) {
         font-size: 2.5vmin;
       }
-
 
       svg {
         fill: currentColor;
@@ -158,6 +170,10 @@
         height: 100%;
         fill: currentColor;
       }
+
+      @media print {
+        display: none;
+      }
     }
   }
 
@@ -168,11 +184,20 @@
     @media (min-width: $sm-w) {
       padding-top: 0;
     }
+    @media print {
+      padding-top: 0;
+    }
 
     .image {
       display: none;
 
       @media (min-width: $sm-w) {
+        display: block;
+        height: 50vh;
+        margin-bottom: 7vmin;
+      }
+
+      @media print {
         display: block;
         height: 50vh;
         margin-bottom: 7vmin;
@@ -202,6 +227,10 @@
           }
         }
       }
+
+      @media print {
+        page-break-after: always;
+      }
     }
 
     & > h2 {
@@ -218,6 +247,10 @@
 
       @media (min-width: $md-w) {
         font-size: 1.2vw;
+      }
+
+      @media print {
+        page-break-after: always;
       }
 
       .comparison {
