@@ -42,20 +42,11 @@
     {{ this.section_one }}
   </section>
   <section id="{{ this.section_two_id }}">
-    <h2>Sponsors</h2>
-    <ul class="sponsors">
-      {% for label, path in bag('sponsors').iteritems() %}
-      <li>
-        <a href="{{ path }}" rel="external" style="background-image: url(img/sponsors/{{ label | replace(" ", "-") | lower }}.svg);"><span class="text">{{ label }}</span></a>
-      </li>
-      {% endfor %}
-    </ul>
-
     {{ this.section_two }}
   </section>
-  <section id="{{ this.section_three_id }}">
+  <!--section id="{{ this.section_three_id }}">
     {{ this.section_three }}
-  </section>
+  </section-->
 </div>
 <footer class="site-footer">
   <div class="container">
